@@ -1,0 +1,13 @@
+:root{--bg:#02101a;--ink:#e6fbff;--accent:#5eead4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html,body{height:100%;margin:0;background:var(--bg);color:var(--ink);overflow:hidden;font-family:system-ui,-apple-system,"Noto Sans Bengali","Hind Siliguri",sans-serif}
+#c{position:fixed;inset:0;width:100%;height:100%;touch-action:none;display:block}
+.glass{background:rgba(4,24,38,.62);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(94,234,212,.25)}
+.chip{white-space:nowrap;transition:all .3s}
+.chip.on{background:var(--accent);color:#012;box-shadow:0 0 18px rgba(94,234,212,.6)}
+#card{transition:opacity .5s,transform .5s}
+#card.swap{opacity:0;transform:translateY(12px)}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+.fi{animation:fadeIn 1.4s ease both}
+.chips::-webkit-scrollbar{display:none}
+.opt{transition:all .25s;text-align:left}.opt.ok{background:#10b981!important;color:#012}.opt.bad{background:#f43f5e!important}
+.lb{position:fixed;left:0;top:0;pointer-events:none;font-size:11px;padding:2px 8px;border-radius:999px;background:rgba(4,24,38,.78);border:1px solid rgba(255,170,100,.6);color:#ffd9b0;transition:opacity .5s;white-space:nowrap;will-change:transform}

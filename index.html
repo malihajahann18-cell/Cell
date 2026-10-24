@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cell Odyssey – Journey Inside a Cell</title>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<header class="fixed left-0 right-0 px-4 pt-3 fi" style="top:env(safe-area-inset-top,0px)">
+  <h1 class="text-xl font-bold tracking-widest" style="color:var(--accent)">CELL ODYSSEY</h1>
+  <p class="text-[11px] tracking-widest opacity-70">3D · JOURNEY INSIDE A CELL</p>
+  <div class="flex flex-wrap gap-2 mt-2 text-xs">
+    <button id="bm" class="glass rounded-full px-3 py-1.5">▶ Mission</button>
+    <button id="bq" class="glass rounded-full px-3 py-1.5">🎯 Quiz</button>
+    <button id="bp" class="glass rounded-full px-3 py-1.5">🌱 Plant cell</button>
+    <button id="bs" class="glass rounded-full px-3 py-1.5">🔇 Sound</button>
+  </div>
+</header>
+
+<section id="card" class="glass fixed left-3 right-3 rounded-2xl p-4 overflow-y-auto" style="max-height:46vh;bottom:calc(env(safe-area-inset-bottom,0px) + 74px)">
+  <div class="flex items-baseline gap-2">
+    <h2 id="t" class="text-lg font-bold"></h2>
+    <span id="s" class="text-[11px] tracking-widest opacity-60"></span>
+  </div>
+  <p id="d" class="text-sm mt-1 leading-relaxed opacity-90"></p>
+  <p id="f" class="text-xs mt-2 leading-relaxed" style="color:var(--accent)"></p>
+  <div id="x"></div>
+</section>
+
+<div id="qz" class="glass fixed left-3 right-3 rounded-2xl p-4 hidden" style="bottom:calc(env(safe-area-inset-bottom,0px) + 14px)"></div>
+
+<nav class="fixed left-0 right-0 px-3" style="bottom:calc(env(safe-area-inset-bottom,0px) + 14px)">
+  <div id="chips" class="chips glass rounded-full p-1.5 flex gap-1.5 overflow-x-auto text-sm"></div>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
